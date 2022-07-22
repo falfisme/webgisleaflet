@@ -13,8 +13,9 @@ class Home extends CI_Controller {
 	
 	public function index()
 	{
+		$this->simple_login->cek_login();
 		$data = array(
-			'title' => 'View Map',
+			'title' => 'Admin Dashboard',
 			'isi'	=> 'v_home'
 		 );
 		$this->load->view('template/v_wrapper', $data, FALSE);
