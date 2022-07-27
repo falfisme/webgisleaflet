@@ -7,16 +7,29 @@
   <title>GIS Leaflet : <?= $title ?></title>
   <!-- BOOTSTRAP STYLES-->
   <link href="<?= base_url() ?>template/assets/css/bootstrap.css" rel="stylesheet" />
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous"> -->
   <!-- FONTAWESOME STYLES-->
   <link href="<?= base_url() ?>template/assets/css/font-awesome.css" rel="stylesheet" />
   <!-- CUSTOM STYLES-->
   <link href="<?= base_url() ?>template/assets/css/custom.css" rel="stylesheet" />
   <!-- GOOGLE FONTS-->
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+   <!-- MORRIS CHART STYLES-->
+   <link href="<?= base_url() ?>template/assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
   <!-- TABLE STYLES-->
   <link href="<?= base_url() ?>template/assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
   <!-- LEAFLET-->
-  <link rel="stylesheet" href="<?= base_url() ?>/leaflet/leaflet.css" />
-  <script src="<?= base_url() ?>/leaflet/leaflet.js"></script>
-  
+  <link rel="stylesheet" href="<?= base_url() ?>leaflet/leaflet.css" />
+  <!-- CUSTOM SCRIPTS -->
+  <script src="<?= base_url() ?>template/assets/js/custom.js"></script> 
+  <script src="<?= base_url() ?>leaflet/leaflet.js"></script>
+
+
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <!-- <script src="<?=base_url()?>template/assets/js/jquery-1.10.2.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+
+
 </head>

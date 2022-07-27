@@ -29,7 +29,7 @@ class Simple_login
             $this->CI->session->set_userdata('username', $username);
             $this->CI->session->set_userdata('role', $role);
             //redirect kehalaman admin yang di proteksi
-            redirect(base_url('admin/dasbor'),'refresh');
+            redirect(base_url('home'),'refresh');
             
         }else{
             // kalau tidak benar/ada, suruh login lagi.

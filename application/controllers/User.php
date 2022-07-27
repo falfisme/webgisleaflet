@@ -71,6 +71,7 @@ class User extends CI_Controller {
     public function edit($id_user)
     {
         $user = $this->m_user->detail($id_user);
+        var_dump($user->password);
 
         // Validasi Input
         $valid = $this->form_validation;
@@ -98,7 +99,7 @@ class User extends CI_Controller {
                             'name'              => $i->post('name'),
                             'email'             => $i->post('email'),
                             'username'          => $i->post('username'),
-                            'password'          => SHA1($i->post('password')),
+                            'password'          => $user->password,
                             'role'              => $i->post('role')
                         );
             $this->m_user->edit($data);

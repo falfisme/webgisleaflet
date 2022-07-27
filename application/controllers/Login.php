@@ -10,7 +10,7 @@ class Login extends CI_Controller {
         //validasi
         $this->form_validation->set_rules('username', 'Username', 'required', 
         array('required' => '%s harus diisi') );
-
+ 
         $this->form_validation->set_rules('password', 'Password', 'required', 
         array('required' => '%s harus diisi') );
 

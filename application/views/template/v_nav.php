@@ -13,15 +13,15 @@
                     <li>
                         <a class="<?php echo (uri_string() == 'home') ?'active-menu':''?> btn-nav" href="<?=base_url('home')?>"><i class="fa fa-globe"></i> Dashboard</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a class="<?php echo (uri_string() == 'home/usaha') ?'active-menu':''?> btn-nav" href="<?=base_url('home/usaha')?>"><i class="fa fa-globe"></i> Pemetaan IKM</a>
                     </li>
                     <li>
                         <a class="<?php echo (uri_string() == 'home/coordinate') ?'active-menu':''?> btn-nav" href="<?=base_url('home/coordinate')?>"><i class="fa fa-globe"></i> Melihat Koordinat</a>
-                    </li>
+                    </li> -->
                     <li class="active">
                         <a href="#"><i class="fa fa-sitemap"></i> Manajemen User<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level collapse in" aria-expanded="true" style="">
+                        <ul class="nav nav-second-level collapse in" aria-expanded="false" style="">
                             <li>
                                 <a href="<?=base_url('user')?>">Data User</a>
                             </li>
@@ -34,13 +34,13 @@
                         </ul>
                     </li>
                     <li class="active">
-                        <a href="#"><i class="fa fa-sitemap"></i> Kelola Bazar<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level collapse in" aria-expanded="true" style="">
+                        <a href="#"><i class="fa fa-sitemap"></i> Kelola Profil Usaha<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse in" aria-expanded="false" style="">
                             <li>
-                                <a href="#">Data Bazar</a>
+                                <a href="<?=base_url('usaha')?>">Kelola Usaha</a>
                             </li>
                             <li>
-                                <a href="#">Tambah Bazar</a>
+                                <a href="<?=base_url('usaha/tambahusaha')?>">Tambah Usaha</a>
                             </li>
                         </ul>
                     </li>
@@ -48,27 +48,13 @@
                         <a href="#"><i class="fa fa-sitemap"></i> Kelola Produk<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse in" aria-expanded="true" style="">
                             <li>
-                                <a href="#">Data Produk</a>
+                                <a href="<?=base_url('produk')?>">Data Produk</a>
                             </li>
                             <li>
                                 <a href="#">Verifikasi Produk</a>
                             </li>
                             <li>
-                                <a href="#">Tambah Produk</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="active">
-                        <a href="#"><i class="fa fa-sitemap"></i> Kelola Profil Usaha<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level collapse in" aria-expanded="true" style="">
-                            <li>
-                                <a href="#">Kelola Pelaku Usaha</a>
-                            </li>
-                            <li>
-                                <a href="#">Kelola Kecamatan</a>
-                            </li>
-                            <li>
-                                <a href="#">Tambah Pelaku Usaha</a>
+                                <a href="<?=base_url('produk/tambahproduk')?>">Tambah Produk</a>
                             </li>
                         </ul>
                     </li>
@@ -83,6 +69,19 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="active">
+                        <a href="#"><i class="fa fa-sitemap"></i> Kelola Bazar<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse in" aria-expanded="true" style="">
+                            <li>
+                                <a href="#">Data Bazar</a>
+                            </li>
+                            <li>
+                                <a href="#">Tambah Bazar</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                   
                 	
                 </ul>
                
