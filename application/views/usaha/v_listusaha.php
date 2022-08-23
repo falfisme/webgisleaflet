@@ -44,11 +44,8 @@ if ($this->session->flashdata('sukses')) {
                                     <td><?= $usaha->kecamatan ?></td>
                                     <td><?= $usaha->jenis_usaha ?></td>
                                     <td>
-                                        <a id="set_dtl" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal" data-namausaha="<?= $usaha->nama_usaha ?>" data-namapengusaha="<?= $this->m_user->detail($usaha->id_user)->name ?>" data-nik="<?= $usaha->nik ?>" data-alamat="<?= $usaha->alamat ?>" data-kecamatan="<?= $usaha->kecamatan ?>" data-email="<?= $this->m_user->detail($usaha->id_user)->email ?>" data-hp="<?= $usaha->hp ?>" data-hp="<?= $usaha->hp ?>" data-jenisusaha="<?= $usaha->jenis_usaha ?>" data-namaproduk="<?= $usaha->nama_produk ?>" data-harga="<?= $usaha->harga ?>" data-latlng="<?= $usaha->lat_lng ?>">
-                                            Lihat Detail
-                                        </a>
 
-                                        <a href="<?= base_url('usaha/edit/' . $usaha->id_usaha) ?>" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i> Edit</a>
+                                        <a href="<?= base_url('usaha/edit/' . $usaha->id_usaha) ?>" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i> Lihat/Edit</a>
 
                                         <a href="<?= base_url('usaha/delete/' . $usaha->id_usaha) ?>" class="btn btn-danger btn-xs" onclick="return confirm('Yakin ingin menghapus data ini?')"><i class="fa fa-trash"></i> Hapus</a>
                                     </td>
@@ -113,42 +110,3 @@ if ($this->session->flashdata('sukses')) {
         </div>
     </div>
 </div>
-
-<script>
-
-    $(document).ready(function() {
-        $(document).on('click', '#set_dtl', function() {
-            var namausaha = $(this).attr('data-namausaha');
-            var namapengusaha = $(this).attr('data-namapengusaha');
-            var nik = $(this).attr('data-nik');
-            var alamat = $(this).attr('data-alamat');
-            var kecamatan = $(this).attr('data-kecamatan');
-            var email = $(this).attr('data-email');
-            var hp = $(this).attr('data-hp');
-            var jenisusaha = $(this).attr('data-jenisusaha');
-            var namaproduk = $(this).attr('data-namaproduk');
-            var harga = $(this).attr('data-harga');
-            var latlng = $(this).attr('data-latlng');
-            let latlngsplit = latlng.split(',');
-            let lat = latlngsplit[0];
-            let lng = latlngsplit[1];
-
-            console.log(lat);
-
-            $('.nama_usaha').text(namausaha);
-            $('#nama_pengusaha').text(namapengusaha);
-            $('#nik').text(nik);
-            $('#alamat').text(alamat);
-            $('#kecamatan').text(kecamatan);
-            $('#email').text(email);
-            $('#hp').text(hp);
-            $('#jenisusaha').text(jenisusaha);
-            $('#namaproduk').text(namaproduk);
-            $('#harga').text(harga);
-            // $('.latlng').text(latlng);
-
-            
-        });
-    });
-
-</script>

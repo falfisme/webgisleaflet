@@ -6,7 +6,7 @@
 
 <div class="wrap_header">
 	<!-- Logo -->
-	<a href="index.html" class="logo">
+	<a href="<?= base_url('') ?>" class="logo">
 		<img src="<?= base_url('icon/logo.png') ?>" alt="IMG-LOGO">
 	</a>
 
@@ -16,17 +16,17 @@
 			<ul class="main_menu">
 
 				<!-- BERANDA -->
-				<li class="<?php echo (uri_string() == '') ?'sale-noti':''?> ">
+				<li class="<?php echo (uri_string() == '') ? 'sale-noti' : '' ?> ">
 					<a href="<?php echo base_url(); ?>">Beranda</a>
 				</li>
-				<li class="<?php echo (uri_string() == 'maps') ?'sale-noti':''?> ">
+				<li class="<?php echo (uri_string() == 'maps') ? 'sale-noti' : '' ?> ">
 					<a href="<?php echo base_url('maps'); ?>">Maps</a>
 				</li>
-				<li class="<?php echo (uri_string() == 'bazar') ?'sale-noti':''?> ">
-					<a href="<?php echo base_url(); ?>">Bazar</a>
+				<li class="<?php echo (uri_string() == 'bazar') ? 'sale-noti' : '' ?> ">
+					<a href="<?php echo base_url('bazar'); ?>">Bazar</a>
 				</li>
-				<li class="<?php echo (uri_string() == 'usaha') ?'sale-noti':''?> ">
-					<a href="<?php echo base_url(); ?>">Usaha</a>
+				<li class="<?php echo (uri_string() == 'produk') ? 'sale-noti' : '' ?> ">
+					<a href="<?php echo base_url('produk'); ?>">Produk</a>
 				</li>
 
 
@@ -38,7 +38,7 @@
 					?>
 						<li><a href="<?php //echo base_url('produk/kategori/'.$nav_produk->slug_kategori) 
 										?>"><?php // echo $nav_produk->nama_kategori 
-																												?>
+											?>
 						</a></li>
 					<?php //endforeach; 
 					?>
@@ -72,7 +72,7 @@
 <!-- Header Mobile -->
 <div class="wrap_header_mobile">
 	<!-- Logo moblie -->
-	<a href="index.html" class="logo-mobile">
+	<a href="<?= base_url() ?>" class="logo-mobile">
 		<img src="<?= base_url('icon/logo.png') ?>" alt="IMG-LOGO">
 	</a>
 
@@ -99,7 +99,7 @@
 <div class="wrap-side-menu">
 	<nav class="side-menu">
 		<ul class="main-menu">
-			<li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
+			<!-- <li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
 				<span class="topbar-child1">
 					<?php //echo $site->alamat 
 					?>
@@ -122,38 +122,55 @@
 						</select>
 					</div>
 				</div>
-			</li>
+			</li> -->
 
-			<li class="item-topbar-mobile p-l-10">
+			<!-- <li class="item-topbar-mobile p-l-10">
 				<div class="topbar-social-mobile">
 					<a href="http://facebook.com/<?php //echo $site->facebook 
 													?>" class="topbar-social-item fa fa-facebook"></a>
 					<a href="http://instagram.com/<?php //echo $site->instagram 
 													?>" class="topbar-social-item fa fa-instagram"></a>
 				</div>
-			</li>
+			</li> -->
 
 			<!-- Menu mobile homepage -->
 
+			<!-- <li class="item-menu-mobile">
+				<a href="<?php //echo base_url('beranda') 
+							?>">Beranda</a>
+			</li> -->
 			<li class="item-menu-mobile">
-				<a href="<?php echo base_url('beranda') ?>">Beranda</a>
+				<a href="<?php echo base_url(); ?>">Beranda</a>
+			</li>
+			<li class="item-menu-mobile">
+				<a href="<?php echo base_url('maps'); ?>">Maps</a>
+			</li>
+			<li class="item-menu-mobile">
+				<a href="<?php echo base_url('bazar'); ?>">Bazar</a>
+			</li>
+			<li class="item-menu-mobile">
+				<a href="<?php echo base_url('produk'); ?>">Produk</a>
+			</li>
+			<li class="item-menu-mobile">
+				<a href="<?php echo base_url('login'); ?>">Login/Registrasi</a>
 			</li>
 
 
-			<li class="item-menu-mobile">
-				<a href="<?php echo base_url('beranda') ?>">Produk &amp; Belanja</a>
+			<!-- <li class="item-menu-mobile">
+				<a href="<?php //echo base_url('beranda') 
+							?>">Produk &amp; Belanja</a>
 				<ul class="sub-menu">
 					<?php //foreach ($nav_produk_mobile as $nav_produk_mobile) : 
 					?>
-					<li><a href="<? php // echo base_url('produk/kategori/'.$nav_produk_mobile->slug_kategori) 
+					<li><a href="<?php // echo base_url('produk/kategori/'.$nav_produk_mobile->slug_kategori) 
 									?>"><?php //echo $nav_produk_mobile->nama_kategori 
-																													?>
+										?>
 						</a></li>
 					<?php //endforeach; 
 					?>
 				</ul>
 				<i class="arrow-main-menu fa fa-angle-right" aria-hidden="true"></i>
-			</li>
+			</li> -->
 
 		</ul>
 	</nav>

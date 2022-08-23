@@ -37,7 +37,7 @@ if ($this->session->flashdata('sukses')) {
                                         $no = $no + 1; ?></td>
                                     <td><?= $user->name ?></td>
                                     <td><?= $user->email ?></td>
-                                    <td><?= $this->m_usaha->detaildua($user->id_user)->nik  ?></td>
+                                    <td><?= $user->niknip  ?></td>
                                     <!-- <td><?php echo json_decode(json_encode($this->m_roleuser->detail($user->role)->role_name), true); ?></td> -->
                                     <td>
                                         <a href="<?= base_url('usaha/tambah/' . $user->id_user) ?>" class="btn btn-primary btn-xl"><i class="fa fa-plus"></i> Tambah Usaha</a>

@@ -27,20 +27,39 @@ if ($this->session->flashdata('sukses')) {
                                 <th>Nama Usaha</th>
                                 <th>Nama Pelaku Usaha</th>
                                 <th>Harga</th>
+                                <th>View</th>
                                 <th>Action</th>
 
                             </tr>
                         </thead>
                         <tbody>
                             <?php $no = 1;
-                            foreach ($produk as $produk) { ?>
+                            foreach ($produk as $produk) {
+                                //var_dump($this->m_usaha->detaildua($produk->id_user));
+                            ?>
                                 <tr class="odd gradeX">
-                                    <td><?= $no;
-                                        $no = $no + 1; ?></td>
-                                    <td><?= $produk->nama_produk ?></td>
-                                    <td><?= $this->m_usaha->detail($produk->id_user)->nama_usaha ?></td>
+                                    <td>
+                                        <?= $no;
+                                        $no = $no + 1; ?>
+                                    </td>
+
+                                    <td>
+                                        <?php if ($produk->verif == 1) { ?>
+                                            <?= $produk->nama_produk ?>
+                                        <?php } else { ?>
+                                            <?= $produk->nama_produk ?> <button class="btn btn-basic btn-xs">unverified</button>
+                                        <?php } ?>
+                                    </td>
+                                    <td><?= $this->m_usaha->detaildua($produk->id_user)->nama_usaha ?></td>
                                     <td><?= $this->m_user->detail($produk->id_user)->name ?></td>
                                     <td><?= $produk->harga ?></td>
+                                    <td>
+                                        <?php if ($produk->status_produk == 'Publish') { ?>
+                                            <button class="btn btn-success btn-xs"><i class="fa fa-check"></i> </button>
+                                        <?php } else { ?>
+                                            <button class="btn btn-danger btn-xs"><i class="fa fa-close"></i> </button>
+                                        <?php } ?>
+                                    </td>
                                     <td>
                                         <a href="<?= base_url('produk/gambar/' . $produk->id_produk) ?>" class="btn btn-primary btn-xs"><i class="fa fa-image"></i> Gambar</a>
 

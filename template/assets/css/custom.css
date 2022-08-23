@@ -206,7 +206,7 @@ max-width:170px;
 }
 
 .navbar-cls-top .navbar-brand {
-	color: #343A40;
+	color: #fff;
 /* background: #F4F6F9; */
 background-color: #fff;
 width: 260px;
@@ -267,7 +267,8 @@ font-weight: 700;
 .sidebar-collapse .nav > li > a:focus {
 	
 	background:#F4F6F9;
-    color: #343A40;
+    /* baru digant */
+    color: #343A40; 
 	outline:0;
 }
 
@@ -324,17 +325,18 @@ border:0px solid #f00;
      
 }
 .navbar-header {
-    background: #A70303;
+    background: #ffffff;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
 background-color: #B40101;
 }
 .navbar-default .navbar-toggle {
-border-color: #fff;
+border-color: #f00;
+
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-background-color: #FFF;
+background-color: #f00;
 }
 .nav > li > a > i {
     margin-right:10px;

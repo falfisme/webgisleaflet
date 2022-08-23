@@ -34,6 +34,16 @@ class M_usaha extends CI_Model
         return $query->row();
     }
 
+    public function detailtiga($id_user)
+    {
+        $this->db->select('*');
+        $this->db->from('usaha');
+        $this->db->where('id_user', $id_user);
+        $this->db->order_by('id_user', 'desc');
+        $query = $this->db->get();
+        return $query->result();
+    }
+
     // tambah data
     public function tambah($data)
     {

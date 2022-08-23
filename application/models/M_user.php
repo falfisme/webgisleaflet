@@ -25,11 +25,22 @@ class M_user extends CI_Model {
         $this->db->select('*');
         $this->db->from('users');
         $this->db->where('id_user', $id_user);
-        $this->db->order_by('id_user', 'desc');
+        // $this->db->order_by('id_user', 'desc');
         $query = $this->db->get();
         return $query->row();
     }
 
+        // detail role
+        public function detailrole($role)
+        {
+            $this->db->select('*');
+            $this->db->from('users');
+            $this->db->where('role', $role);
+            $query = $this->db->get();
+            return $query->result();
+        }
+
+        
     // login user
     public function login($username, $password)
     {

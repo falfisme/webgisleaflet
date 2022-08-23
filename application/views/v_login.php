@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,7 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Font Awesome --> 
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="<?= base_url() ?>assets/admin/plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
@@ -18,39 +19,47 @@
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
+
 <body class="hold-transition login-page">
-<div class="login-box">
-  <div class="login-logo">
-    <a href="../../index2.html"><?= $title ?></a>
-  </div>
-  <!-- /.login-logo -->
-  <div class="card">
-    <div class="card-body login-card-body">
-      <p class="login-box-msg">Masukkan username dan password</p>
+  <div class="login-box">
+    <div class="login-logo">
+      <img src="<?= base_url('icon/logo.png') ?>" width="80%" style="padding:7px;" alt="IMG-LOGO">
+    </div>
+    <!-- /.login-logo -->
 
-<?php 
+    <?php
+    if ($this->session->userdata('username') != NULL) {
+      redirect(base_url('home'), 'refresh');
+    }
 
-// Notifikasi Error
-echo validation_errors('<div class="alert alert-success">', '</div>');
+    ?>
+    <div class="card">
+      <div class="card-body login-card-body">
+        <p class="login-box-msg">Masukkan username dan password</p>
 
-// Notifikasi gagal login
-if ($this->session->flashdata('warning')) {
-  echo '<div class="alert alert-warning">';
-  echo $this->session->flashdata('warning');
-  echo '</div>';
-}
+        <?php
 
-// Notifikasi logout
-if ($this->session->flashdata('sukses')) {
-  echo '<div class="alert alert-success">';
-  echo $this->session->flashdata('sukses');
-  echo '</div>';
-}
+        // Notifikasi Error
+        echo validation_errors('<div class="alert alert-success">', '</div>');
 
-// Form open login
-echo form_open(base_url('login'));
+        // Notifikasi gagal login
+        if ($this->session->flashdata('warning')) {
+          echo '<div class="alert alert-warning">';
+          echo $this->session->flashdata('warning');
+          echo '</div>';
+        }
 
-?>
+        // Notifikasi logout
+        if ($this->session->flashdata('sukses')) {
+          echo '<div class="alert alert-success">';
+          echo $this->session->flashdata('sukses');
+          echo '</div>';
+        }
+
+        // Form open login
+        echo form_open(base_url('login'));
+
+        ?>
         <div class="input-group mb-3">
           <input type="text" name="username" class="form-control" placeholder="Username">
           <div class="input-group-append">
@@ -83,37 +92,33 @@ echo form_open(base_url('login'));
           <!-- /.col -->
         </div>
 
-<?= form_close(); ?>
+        <?= form_close(); ?>
 
-      <div class="social-auth-links text-center mb-3">
-        <p>- OR -</p>
-        <a href="#" class="btn btn-block btn-primary">
-          <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
-        </a>
-        <a href="#" class="btn btn-block btn-danger">
-          <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
-        </a>
-      </div>
-      <!-- /.social-auth-links -->
+        <!-- /.social-auth-links -->
 
-      <!-- <p class="mb-1">
+        <!-- <p class="mb-1">
         <a href="forgot-password.html">I forgot my password</a>
       </p>
       <p class="mb-0">
         <a href="register.html" class="text-center">Register a new membership</a>
       </p>
     </div> -->
-    <!-- /.login-card-body -->
-  </div>
-</div>
-<!-- /.login-box -->
+        <!-- /.login-card-body -->
+      </div>
+    </div>
+    <!-- /.login-box -->
 
-<!-- jQuery -->
-<script src="<?= base_url() ?>assets/admin/plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="<?= base_url() ?>assets/admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- AdminLTE App -->
-<script src="<?= base_url() ?>assets/admin/dist/js/adminlte.min.js"></script>
+    <p class="mb-0">
+      <a href="<?php base_url() ?>register" class="text-center">Daftar Anggota Baru</a>
+    </p>
+
+    <!-- jQuery -->
+    <script src="<?= base_url() ?>assets/admin/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="<?= base_url() ?>assets/admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="<?= base_url() ?>assets/admin/dist/js/adminlte.min.js"></script>
 
 </body>
+
 </html>
